@@ -2,37 +2,37 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Akavache\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Splat\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
-    <ResolvedResourceDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Akavache\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Splat\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Akavache\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Splat\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
-    <ResolvedAssetDirectory>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Akavache\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Splat\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\SQLitePCL.raw\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Akavache.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Splat.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\SQLitePCL.raw.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
-    <ResolvedResourceDirectoryStamp>G:\Projects\Nichely\NichelyPrototype\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Akavache.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\FFImageLoading.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Splat.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\SQLitePCL.raw.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Forms.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\__library_projects__\XLabs.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>
