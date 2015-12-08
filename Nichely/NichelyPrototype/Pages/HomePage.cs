@@ -1,11 +1,13 @@
 ﻿using System;
 using Xamarin.Forms;
 using FFImageLoading.Forms;
-using XLabs.Platform.Services.Media;
 using System.Threading.Tasks;
 using System.Collections;
 using System.Reflection;
 using System.IO;
+using MediaPicker.Forms.Plugin.Abstractions;
+using Plugin.Media;
+
 
 namespace NichelyPrototype
 {
@@ -13,7 +15,7 @@ namespace NichelyPrototype
     {
         ListView images;
 		private ImageSource imageSource;
-		private IMediaPicker mediaPicker;
+		private MediaPicker.Forms.Plugin.Abstractions.IMediaPicker mediaPicker;
 		private Image img;
 		private string status;
 
@@ -86,40 +88,70 @@ namespace NichelyPrototype
 		private async Task TakePictureAsync ()
 		{
 
-			mediaPicker = DependencyService.Get<IMediaPicker>();
-		
-			imageSource = null;
+			//mediaPicker = DependencyService.Get<MediaPicker.Forms.Plugin.Abstractions.IMediaPicker>();
+
+			//imageSource = null;
 
 			try
 			{
-				var mediaResult = await this.mediaPicker.TakePhotoAsync(new CameraMediaStorageOptions { DefaultCamera = CameraDevice.Front, MaxPixelDimension = 400 }).ContinueWith(t =>
-					{
-						if (t.IsFaulted)
-						{
-							var s = t.Exception.InnerException.ToString();
-						}
-						else if (t.IsCanceled)
-						{
-							var canceled = true;
-						}
-						else
-						{
-							var mediaFile = t.Result;
-							mediaFile.Exif.Orientation = ExifLib.ExifOrientation.TopLeft;
-							//var imgName = "NIMG_" + Guid.NewGuid() + ".jpg";
-							//imageSource = ImageSource.FromStream(() => mediaFile.Source);
-							//FileAccess.WriteStream(imgName, mediaFile.Source);
-							//ImageSource imgSource = ImageSource.FromFile (FileAccess.FullPath (imgName)); 
-							//mediaFile.Path = FileAccess.FullPath (imgName);
+//				var mediaResult = await mediaPicker.TakePhotoAsync(
+//					new MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions { 
+//						DefaultCamera = MediaPicker.Forms.Plugin.Abstractions.CameraDevice.Front, 
+//						MaxPixelDimension = 400, 
+//						PercentQuality = 85 }).ContinueWith(t =>
+//					{
+//						if (t.IsFaulted)
+//						{
+//							var s = t.Exception.InnerException.ToString();
+//						}
+//						else if (t.IsCanceled)
+//						{
+//							var canceled = true;
+//						}
+//						else
+//						{
+//
+//							var mediaFile = t.Result;
+//
+//							//var imgName = "NIMG_" + Guid.NewGuid() + ".jpg";
+//							//imageSource = ImageSource.FromStream(() => mediaFile.Source);
+//							//FileAccess.WriteStream(imgName, mediaFile.Source);
+//							//ImageSource imgSource = ImageSource.FromFile (FileAccess.FullPath (imgName)); 
+//							//mediaFile.Path = FileAccess.FullPath (imgName);
+//
+//							return mediaFile;
+//						}
+//
+//						return null;
+//					});
+//				if (mediaResult != null){
 
-							return mediaFile;
-						}
-
-						return null;
-					});
-				if (mediaResult != null){
-					await Navigation.PushAsync(new AddPage(mediaResult.Path));
+				if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+				{
+					DisplayAlert("No Camera", ":( No camera available.", "OK");
+					return;
 				}
+
+				var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+					{
+						Directory = "Nichely",
+						Name = String.Format("photo_{0}.jpg", Guid.NewGuid())
+					});
+
+				if (file == null)
+					return;
+				
+				await Navigation.PushAsync(new AddPage(file.Path));
+//				DisplayAlert("File Location", file.Path, "OK");
+//
+//				image.Source = ImageSource.FromStream(() =>
+//					{
+//						var stream = file.GetStream();
+//						file.Dispose();
+//						return stream;
+//					}); 
+
+
 			}
 			catch (System.Exception ex)
 			{

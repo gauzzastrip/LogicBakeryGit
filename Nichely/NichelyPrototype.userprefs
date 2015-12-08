@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="Droid\NichelyPrototype.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.169.254.109.177:5555" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\Services\CameraService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs">
     <Files>
-      <File FileName="NichelyPrototype\Pages\AddPage.cs" Line="83" Column="4" />
-      <File FileName="NichelyPrototype\Pages\DetailPage.cs" Line="81" Column="1" />
-      <File FileName="NichelyPrototype\Pages\HomePage.cs" Line="95" Column="90" />
-      <File FileName="NichelyPrototype\Data\DataService.cs" Line="63" Column="1" />
-      <File FileName="NichelyPrototype\Utilities\StringExtentions.cs" Line="1" Column="1" />
-      <File FileName="Droid\Renderers\LargeImageRenderer.cs" Line="42" Column="21" />
-      <File FileName="NichelyPrototype\Utilities\LargeImage.cs" Line="10" Column="1" />
-      <File FileName="Droid\MainActivity.cs" Line="30" Column="19" />
-      <File FileName="Droid\Services\CameraService.cs" Line="1" Column="1" />
+      <File FileName="NichelyPrototype\Pages\AddPage.cs" Line="1" Column="1" />
+      <File FileName="NichelyPrototype\Pages\DetailPage.cs" Line="1" Column="1" />
+      <File FileName="NichelyPrototype\Pages\HomePage.cs" Line="139" Column="60" />
+      <File FileName="Droid\Renderers\LargeImageRenderer.cs" Line="1" Column="1" />
+      <File FileName="Droid\MainActivity.cs" Line="69" Column="6" />
+      <File FileName="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" Line="301" Column="3" />
+      <File FileName="Droid\Services\NicheOrientationListener.cs" Line="60" Column="20" />
+      <File FileName="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\MediaStoreOptions.cs" Line="53" Column="13" />
+      <File FileName="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\MediaExtensions.cs" Line="33" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -19,6 +19,12 @@
       <Breakpoint file="G:\Projects\Nichely\NichelyPrototype\NichelyPrototype\Data\DataService.cs" line="46" column="1" />
       <Breakpoint file="G:\Projects\Nichely\NichelyPrototype\NichelyPrototype\Data\DataService.cs" line="79" column="84" />
       <Breakpoint file="G:\Projects\Nichely\NichelyPrototype\NichelyPrototype\Data\DataService.cs" line="68" column="1" />
+      <Breakpoint file="G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" line="411" column="1" />
+      <Breakpoint file="G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" line="150" column="1" />
+      <Breakpoint file="G:\Projects\LogicBakeryGit\Nichely\Droid\MainActivity.cs" line="131" column="1" />
+      <Breakpoint file="G:\Projects\LogicBakeryGit\Nichely\Droid\MainActivity.cs" line="39" column="1" />
+      <Breakpoint file="G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" line="393" column="18" />
+      <Breakpoint file="G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" line="391" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

@@ -2,13 +2,14 @@ package md52689f2df1f9d26957fa091e8dd83237d;
 
 
 public class MainActivity
-	extends md5321d670dbb66fcada47e236db05ca74a.XFormsApplicationDroid
+	extends md5b60ffeb829f638581ab2bb9b1a7f4f3f.FormsApplicationActivity
 	implements
 		mono.android.IGCUserPeer
 {
 	static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onConfigurationChanged:(Landroid/content/res/Configuration;)V:GetOnConfigurationChanged_Landroid_content_res_Configuration_Handler\n" +
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"";
@@ -22,6 +23,14 @@ public class MainActivity
 		if (getClass () == MainActivity.class)
 			mono.android.TypeManager.Activate ("NichelyPrototype.Droid.MainActivity, NichelyPrototype.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public void onConfigurationChanged (android.content.res.Configuration p0)
+	{
+		n_onConfigurationChanged (p0);
+	}
+
+	private native void n_onConfigurationChanged (android.content.res.Configuration p0);
 
 
 	public void onCreate (android.os.Bundle p0)

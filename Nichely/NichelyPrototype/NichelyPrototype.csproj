@@ -88,23 +88,8 @@
     <Reference Include="Splat">
       <HintPath>..\packages\Splat.1.6.2\lib\Portable-net45+win+wpa81+wp80\Splat.dll</HintPath>
     </Reference>
-    <Reference Include="XLabs.Core">
-      <HintPath>..\packages\XLabs.Core.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Ioc">
-      <HintPath>..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\XLabs.Ioc.dll</HintPath>
-    </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Platform">
-      <HintPath>..\packages\XLabs.Platform.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Serialization">
-      <HintPath>..\packages\XLabs.Serialization.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Forms">
-      <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\portable-net45+netcore45+wpa81+wp8\XLabs.Forms.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading">
       <HintPath>..\packages\Xamarin.FFImageLoading.1.1.8\lib\portable-net45+win+wp80+MonoTouch10+MonoAndroid10+xamarinmac20+xamarinios10\FFImageLoading.dll</HintPath>
@@ -118,8 +103,21 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.0.0.6490\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="MediaPicker.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\detroitpro.Forms.Plugin.MediaPicker.0.0.10\lib\portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10\MediaPicker.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\Media.Plugin.csproj">
+      <Project>{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}</Project>
+      <Name>Media.Plugin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj">
+      <Project>{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}</Project>
+      <Name>Media.Plugin.Abstractions</Name>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -13,8 +13,9 @@ namespace NichelyPrototype
         {
             // Make sure you set the application name before doing any inserts or gets
             BlobCache.ApplicationName = "NichelyPrototype";
-
-			await BlobCache.UserAccount.InsertObject(niche.NicheId.ToString(), niche);
+			if (!(string.IsNullOrEmpty (niche.Title))) {
+				await BlobCache.UserAccount.InsertObject (niche.NicheId.ToString (), niche);
+			}
         }
 
 		public static async Task<List<Niche>> GetAllNichesAsync()

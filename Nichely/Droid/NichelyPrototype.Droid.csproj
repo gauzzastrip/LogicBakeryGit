@@ -91,31 +91,10 @@
     <Reference Include="FFImageLoading.Forms.Droid">
       <HintPath>..\packages\Xamarin.FFImageLoading.Forms.1.1.7.2\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
-    <Reference Include="XLabs.Ioc">
-      <HintPath>..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Ioc.dll</HintPath>
-    </Reference>
     <Reference Include="ExifLib">
       <HintPath>..\packages\ExifLib.PCL.1.0.1\lib\portable-net45+sl50+win+WindowsPhoneApp81+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\ExifLib.dll</HintPath>
     </Reference>
-    <Reference Include="XLabs.Core">
-      <HintPath>..\packages\XLabs.Core.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Platform">
-      <HintPath>..\packages\XLabs.Platform.2.0.5782\lib\MonoAndroid\XLabs.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Platform.Droid">
-      <HintPath>..\packages\XLabs.Platform.2.0.5782\lib\MonoAndroid\XLabs.Platform.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Mono.Android.Export" />
-    <Reference Include="XLabs.Serialization">
-      <HintPath>..\packages\XLabs.Serialization.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Forms">
-      <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\MonoAndroid\XLabs.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="XLabs.Forms.Droid">
-      <HintPath>..\packages\XLabs.Forms.2.0.5782\lib\MonoAndroid\XLabs.Forms.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="FFImageLoading">
       <HintPath>..\packages\Xamarin.FFImageLoading.1.1.8\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
     </Reference>
@@ -137,11 +116,34 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.0.0.6490\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="MediaPicker.Forms.Plugin.Abstractions">
+      <HintPath>..\packages\detroitpro.Forms.Plugin.MediaPicker.0.0.10\lib\MonoAndroid10\MediaPicker.Forms.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaPicker.Forms.Plugin.Android">
+      <HintPath>..\packages\detroitpro.Forms.Plugin.MediaPicker.0.0.10\lib\MonoAndroid10\MediaPicker.Forms.Plugin.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.CurrentActivity">
+      <HintPath>..\packages\Plugin.CurrentActivity.1.0.0\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.1.1.1\lib\MonoAndroid10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.1.1.1\lib\MonoAndroid10\Plugin.Permissions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NichelyPrototype\NichelyPrototype.csproj">
       <Project>{9E36E1B3-17B3-40B9-9730-5B95973A2DD4}</Project>
       <Name>NichelyPrototype</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj">
+      <Project>{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}</Project>
+      <Name>Media.Plugin.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\Media.Plugin.Android.csproj">
+      <Project>{56A56F17-7DE1-4CA1-9617-BF32E971AC84}</Project>
+      <Name>Media.Plugin.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -151,12 +153,16 @@
     <Compile Include="Services\CameraService.cs" />
     <Compile Include="AkavacheSqliteLinkerOverride.cs" />
     <Compile Include="Renderers\LargeImageRenderer.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="Services\NicheOrientationListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="PluginsHelp\CrossActivityReadme.txt" />
+    <None Include="PluginsHelp\PermissionsReadme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />

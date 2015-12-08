@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MediaPicker.Forms.Plugin.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.CameraDevice">
+            <summary>
+                Enum CameraDevice
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.CameraDevice.Rear">
+            <summary>
+                The rear
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.CameraDevice.Front">
+            <summary>
+                The front
+            </summary>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions">
+            <summary>
+                Class CameraMediaStorageOptions.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions" /> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions.DefaultCamera">
+            <summary>
+                Gets or sets the default camera.
+            </summary>
+            <value>The default camera.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions.SaveMediaOnCapture">
+            <summary>
+                Gets or sets a value indicating whether [save media on capture].
+            </summary>
+            <value><c>true</c> if [save media on capture]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker">
+            <summary>
+                Interface IMediaPicker
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.IsCameraAvailable">
+            <summary>
+                Gets a value indicating whether this instance is camera available.
+            </summary>
+            <value><c>true</c> if this instance is camera available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.IsPhotosSupported">
+            <summary>
+                Gets a value indicating whether this instance is photos supported.
+            </summary>
+            <value><c>true</c> if this instance is photos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.IsVideosSupported">
+            <summary>
+                Gets a value indicating whether this instance is videos supported.
+            </summary>
+            <value><c>true</c> if this instance is videos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.OnMediaSelected">
+            <summary>
+                Event the fires when media has been selected
+            </summary>
+            <value>The on photo selected.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.OnError">
+            <summary>
+                Gets or sets the on error.
+            </summary>
+            <value>The on error.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.SelectPhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+                Select a picture from library.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.TakePhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+                Takes the picture.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.SelectVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+                Selects the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.IMediaPicker.TakeVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+                Takes the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaExtensions">
+            <summary>
+            Class MediaExtensions.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaExtensions.VerifyOptions(MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+            Verifies the options.
+            </summary>
+            <param name="self">The self.</param>
+            <exception cref="T:System.ArgumentNullException">options</exception>
+            <exception cref="T:System.ArgumentException">options.Directory must be a relative folder;options</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaExtensions.GetMediaFileWithPath(MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions,System.String)">
+            <summary>
+            Gets the output file name with folder.
+            </summary>
+            <param name="self">The self.</param>
+            <param name="rootPath">The root folder.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaExtensions.GetUniqueMediaFileWithPath(MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions,System.String,System.Func{System.String,System.Boolean})">
+            <summary>
+            Gets the unique filepath.
+            </summary>
+            <param name="self">The self.</param>
+            <param name="rootPath">The root folder.</param>
+            <param name="checkExists">The check exists.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaFileHelpers">
+            <summary>
+            Class MediaFileHelpers.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFileHelpers.GetMediaFileWithPath(System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            Gets the output file with folder.
+            </summary>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <param name="folder">The root folder.</param>
+            <param name="subdir">The subdir.</param>
+            <param name="name">The name.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFileHelpers.GetUniqueMediaFileWithPath(System.Boolean,System.String,System.String,System.Func{System.String,System.Boolean})">
+            <summary>
+            Gets the unique file folder.
+            </summary>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <param name="folder">The folder.</param>
+            <param name="name">The name.</param>
+            <param name="checkExists">The check exists.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaFile">
+            <summary>
+                Class MediaFile. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFile.Dispose">
+            <summary>
+                Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFile.Dispose(System.Boolean)">
+            <summary>
+                Releases unmanaged and - optionally - managed resources.
+            </summary>
+            <param name="disposing">
+                <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only
+                unmanaged resources.
+            </param>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.MediaFile._dispose">
+            <summary>
+                The _dispose
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.MediaFile._path">
+            <summary>
+                The _path
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.MediaFile._streamGetter">
+            <summary>
+                The _stream getter
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.MediaFile._isDisposed">
+            <summary>
+                The _is disposed
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFile.#ctor(System.String,System.Func{System.IO.Stream},System.Action{System.Boolean})">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaFile" /> class.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="streamGetter">The stream getter.</param>
+            <param name="dispose">The dispose.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFile.Finalize">
+            <summary>
+                Finalizes an instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaFile" /> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaFile.Path">
+            <summary>
+                Gets the path.
+            </summary>
+            <value>The path.</value>
+            <exception cref="T:System.ObjectDisposedException">null</exception>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaFile.Source">
+            <summary>
+                Gets the stream.
+            </summary>
+            <value>The source.</value>
+            <exception cref="T:System.ObjectDisposedException">null</exception>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException">
+            <summary>
+            Class MediaFileNotFoundException.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException" /> class.
+            </summary>
+            <param name="path">The path.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException" /> class.
+            </summary>
+            <param name="path">The path.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaFileNotFoundException.Path">
+            <summary>
+            Gets the path.
+            </summary>
+            <value>The path.</value>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaPickerArgs">
+            <summary>
+                Class MediaPickerArgs.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaPickerArgs.#ctor(MediaPicker.Forms.Plugin.Abstractions.MediaFile)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaPickerArgs" /> class.
+            </summary>
+            <param name="mf">The mf.</param>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaPickerArgs.MediaFile">
+            <summary>
+                Gets the media file.
+            </summary>
+            <value>The media file.</value>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaPickerErrorArgs">
+            <summary>
+                Class MediaPickerErrorArgs.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaPickerErrorArgs.#ctor(System.Exception)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaPickerErrorArgs" /> class.
+            </summary>
+            <param name="ex">The ex.</param>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaPickerErrorArgs.Error">
+            <summary>
+                Gets the error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions">
+            <summary>
+                Class MediaStorageOptions.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions" /> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions.Directory">
+            <summary>
+                Gets or sets the directory.
+            </summary>
+            <value>The directory.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions.Name">
+            <summary>
+                Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions.MaxPixelDimension">
+            <summary>
+                Gets or sets the maximum pixel dimension.
+            </summary>
+            <value>The maximum pixel dimension.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions.PercentQuality">
+            <summary>
+                Gets or sets the percent quality.
+            </summary>
+            <value>The percent quality.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.TaskUtils.TaskFromResult``1(``0)">
+            <summary>
+            Tasks from result.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="result">The result.</param>
+            <returns>Task&lt;T&gt;.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions">
+            <summary>
+                Class VideoMediaStorageOptions.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions" /> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions.DefaultCamera">
+            <summary>
+                Gets or sets the default camera.
+            </summary>
+            <value>The default camera.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions.SaveMediaOnCapture">
+            <summary>
+                Gets or sets a value indicating whether [save media on capture].
+            </summary>
+            <value><c>true</c> if [save media on capture]; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions.DesiredLength">
+            <summary>
+                Gets or sets the length of the desired.
+            </summary>
+            <value>The length of the desired.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions.Quality">
+            <summary>
+                Gets or sets the quality.
+            </summary>
+            <value>The quality.</value>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Abstractions.VideoQuality">
+            <summary>
+                Enum VideoQuality
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.VideoQuality.Low">
+            <summary>
+                The low
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.VideoQuality.Medium">
+            <summary>
+                The medium
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Abstractions.VideoQuality.High">
+            <summary>
+                The high
+            </summary>
+        </member>
+    </members>
+</doc>

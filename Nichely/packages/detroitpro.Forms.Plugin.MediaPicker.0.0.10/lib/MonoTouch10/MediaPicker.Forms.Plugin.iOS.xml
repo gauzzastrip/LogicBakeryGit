@@ -1,0 +1,391 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MediaPicker.Forms.Plugin.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:MediaPicker.Forms.Plugin.iOS.MediaPickerController">
+            <summary>
+            Class MediaPickerController. This class cannot be inherited.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerController.#ctor(MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.iOS.MediaPickerController"/> class.
+            </summary>
+            <param name="mpDelegate">The mp delegate.</param>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerController.Delegate">
+            <summary>
+            Gets or sets the delegate.
+            </summary>
+            <value>The delegate.</value>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerController.GetResultAsync">
+            <summary>
+            Gets the result asynchronous.
+            </summary>
+            <returns>Task&lt;MediaFile&gt;.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate">
+            <summary>
+            Class MediaPickerDelegate.
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._orientation">
+            <summary>
+            The _orientation
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._observer">
+            <summary>
+            The _observer
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._options">
+            <summary>
+            The _options
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._source">
+            <summary>
+            The _source
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._tcs">
+            <summary>
+            The _TCS
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate._viewController">
+            <summary>
+            The _view controller
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.#ctor(MonoTouch.UIKit.UIViewController,MonoTouch.UIKit.UIImagePickerControllerSourceType,MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate"/> class.
+            </summary>
+            <param name="viewController">The view controller.</param>
+            <param name="sourceType">Type of the source.</param>
+            <param name="options">The options.</param>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.Popover">
+            <summary>
+            Gets or sets the popover.
+            </summary>
+            <value>The popover.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.View">
+            <summary>
+            Gets the view.
+            </summary>
+            <value>The view.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.Task">
+            <summary>
+            Gets the task.
+            </summary>
+            <value>The task.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.IsCaptured">
+            <summary>
+            Gets a value indicating whether this instance is captured.
+            </summary>
+            <value><c>true</c> if this instance is captured; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.FinishedPickingMedia(MonoTouch.UIKit.UIImagePickerController,MonoTouch.Foundation.NSDictionary)">
+            <summary>
+            Finisheds the picking media.
+            </summary>
+            <param name="picker">The picker.</param>
+            <param name="info">The information.</param>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.Canceled(MonoTouch.UIKit.UIImagePickerController)">
+            <summary>
+            Canceleds the specified picker.
+            </summary>
+            <param name="picker">The picker.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.DisplayPopover(System.Boolean)">
+            <summary>
+            Displays the popover.
+            </summary>
+            <param name="hideFirst">if set to <c>true</c> [hide first].</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.Dismiss(MonoTouch.UIKit.UIImagePickerController,MonoTouch.Foundation.NSAction)">
+            <summary>
+            Dismisses the specified picker.
+            </summary>
+            <param name="picker">The picker.</param>
+            <param name="onDismiss">The on dismiss.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.DidRotate(MonoTouch.Foundation.NSNotification)">
+            <summary>
+            Dids the rotate.
+            </summary>
+            <param name="notice">The notice.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetShouldRotate(MonoTouch.UIKit.UIDeviceOrientation)">
+            <summary>
+            Gets the should rotate.
+            </summary>
+            <param name="orientation">The orientation.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetShouldRotate6(MonoTouch.UIKit.UIDeviceOrientation)">
+            <summary>
+            Gets the should rotate6.
+            </summary>
+            <param name="orientation">The orientation.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetPictureMediaFile(MonoTouch.Foundation.NSDictionary)">
+            <summary>
+            Gets the picture media file.
+            </summary>
+            <param name="info">The information.</param>
+            <returns>MediaFile.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetMovieMediaFile(MonoTouch.Foundation.NSDictionary)">
+            <summary>
+            Gets the movie media file.
+            </summary>
+            <param name="info">The information.</param>
+            <returns>MediaFile.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetUniquePath(System.String,System.String,System.String)">
+            <summary>
+            Gets the unique path.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="path">The path.</param>
+            <param name="name">The name.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetOutputPath(System.String,System.String,System.String)">
+            <summary>
+            Gets the output path.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="path">The path.</param>
+            <param name="name">The name.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.IsValidInterfaceOrientation(MonoTouch.UIKit.UIDeviceOrientation)">
+            <summary>
+            Determines whether [is valid interface orientation] [the specified self].
+            </summary>
+            <param name="self">The self.</param>
+            <returns><c>true</c> if [is valid interface orientation] [the specified self]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.IsSameOrientationKind(MonoTouch.UIKit.UIDeviceOrientation,MonoTouch.UIKit.UIDeviceOrientation)">
+            <summary>
+            Determines whether [is same orientation kind] [the specified o1].
+            </summary>
+            <param name="o1">The o1.</param>
+            <param name="o2">The o2.</param>
+            <returns><c>true</c> if [is same orientation kind] [the specified o1]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate.GetDeviceOrientation(MonoTouch.UIKit.UIInterfaceOrientation)">
+            <summary>
+            Gets the device orientation.
+            </summary>
+            <param name="self">The self.</param>
+            <returns>UIDeviceOrientation.</returns>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation">
+            <summary>
+            MediaPicker Implementation
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.Init">
+            <summary>
+            Used for registration with dependency service
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.TypeImage">
+            <summary>
+            The type image
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.TypeMovie">
+            <summary>
+            The type movie
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation._pickerDelegate">
+            <summary>
+            The _picker delegate
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation._popover">
+            <summary>
+            The _popover
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="N:MediaPicker"/> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.IsCameraAvailable">
+            <summary>
+            Gets a value indicating whether this instance is camera available.
+            </summary>
+            <value><c>true</c> if this instance is camera available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.IsPhotosSupported">
+            <summary>
+            Gets a value indicating whether this instance is photos supported.
+            </summary>
+            <value><c>true</c> if this instance is photos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.IsVideosSupported">
+            <summary>
+            Gets a value indicating whether this instance is videos supported.
+            </summary>
+            <value><c>true</c> if this instance is videos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.OnMediaSelected">
+            <summary>
+            Event the fires when media has been selected
+            </summary>
+            <value>The on photo selected.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.OnError">
+            <summary>
+            Gets or sets the on error.
+            </summary>
+            <value>The on error.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.SelectPhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+            Select a picture from library.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.TakePhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+            Takes the picture.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotSupportedException">
+            </exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.SelectVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+            Selects the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.TakeVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+            Takes the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task&lt;IMediaFile&gt;.</returns>
+            <exception cref="T:System.NotSupportedException">
+            </exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.GetMediaAsync(MonoTouch.UIKit.UIImagePickerControllerSourceType,System.String,MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+            Gets the media asynchronous.
+            </summary>
+            <param name="sourceType">Type of the source.</param>
+            <param name="mediaType">Type of the media.</param>
+            <param name="options">The options.</param>
+            <returns>Task&lt;MediaFile&gt;.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            There's no current active window
+            or
+            Could not find current view controller
+            or
+            Only one operation can be active at at time
+            </exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.SetupController(MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate,MonoTouch.UIKit.UIImagePickerControllerSourceType,System.String,MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+            Setups the controller.
+            </summary>
+            <param name="mpDelegate">The mp delegate.</param>
+            <param name="sourceType">Type of the source.</param>
+            <param name="mediaType">Type of the media.</param>
+            <param name="options">The options.</param>
+            <returns>MediaPickerController.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.GetCameraDevice(MediaPicker.Forms.Plugin.Abstractions.CameraDevice)">
+            <summary>
+            Gets the UI camera device.
+            </summary>
+            <param name="device">The device.</param>
+            <returns>UIImagePickerControllerCameraDevice.</returns>
+            <exception cref="T:System.NotSupportedException"></exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.GetQuailty(MediaPicker.Forms.Plugin.Abstractions.VideoQuality)">
+            <summary>
+            Gets the quailty.
+            </summary>
+            <param name="quality">The quality.</param>
+            <returns>UIImagePickerControllerQualityType.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.VerifyOptions(MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+            Verifies the options.
+            </summary>
+            <param name="options">The options.</param>
+            <exception cref="T:System.ArgumentNullException">options</exception>
+            <exception cref="T:System.ArgumentException">options.Directory must be a relative path;options</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerImplementation.VerifyCameraOptions(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+            Verifies the camera options.
+            </summary>
+            <param name="options">The options.</param>
+            <exception cref="T:System.ArgumentException">options.Camera is not a member of CameraDevice</exception>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate">
+            <summary>
+            Class MediaPickerPopoverDelegate.
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate._picker">
+            <summary>
+            The _picker
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate._pickerDelegate">
+            <summary>
+            The _picker delegate
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate.#ctor(MediaPicker.Forms.Plugin.iOS.MediaPickerDelegate,MonoTouch.UIKit.UIImagePickerController)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate"/> class.
+            </summary>
+            <param name="pickerDelegate">The picker delegate.</param>
+            <param name="picker">The picker.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate.ShouldDismiss(MonoTouch.UIKit.UIPopoverController)">
+            <summary>
+            Shoulds the dismiss.
+            </summary>
+            <param name="popoverController">The popover controller.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.iOS.MediaPickerPopoverDelegate.DidDismiss(MonoTouch.UIKit.UIPopoverController)">
+            <summary>
+            Dids the dismiss.
+            </summary>
+            <param name="popoverController">The popover controller.</param>
+        </member>
+    </members>
+</doc>

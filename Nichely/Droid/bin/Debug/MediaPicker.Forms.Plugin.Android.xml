@@ -1,0 +1,625 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MediaPicker.Forms.Plugin.Android</name>
+    </assembly>
+    <members>
+        <member name="T:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs">
+            <summary>
+                Class MediaPickedEventArgs.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.#ctor(System.Int32,System.Exception)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="error">The error.</param>
+            <exception cref="T:System.ArgumentNullException">error</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.#ctor(System.Int32,System.Boolean,MediaPicker.Forms.Plugin.Abstractions.MediaFile)">
+            <summary>
+                Initializes a new instance of the <see cref="T:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs" /> class.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="isCanceled">if set to <c>true</c> [is canceled].</param>
+            <param name="media">The media.</param>
+            <exception cref="T:System.ArgumentNullException">media</exception>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.RequestId">
+            <summary>
+                Gets the request identifier.
+            </summary>
+            <value>The request identifier.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.IsCanceled">
+            <summary>
+                Gets a value indicating whether this instance is canceled.
+            </summary>
+            <value><c>true</c> if this instance is canceled; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.Error">
+            <summary>
+                Gets the error.
+            </summary>
+            <value>The error.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.Media">
+            <summary>
+                Gets the media.
+            </summary>
+            <value>The media.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs.ToTask">
+            <summary>
+                To the task.
+            </summary>
+            <returns>Task&lt;MediaFile&gt;.</returns>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity">
+            <summary>
+                Class MediaPickerActivity.
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraPath">
+            <summary>
+                The extra path
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraLocation">
+            <summary>
+                The extra location
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraType">
+            <summary>
+                The extra type
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraId">
+            <summary>
+                The extra identifier
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraAction">
+            <summary>
+                The extra action
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ExtraTasked">
+            <summary>
+                The extra tasked
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.MediaFileExtraName">
+            <summary>
+                The medi a_ fil e_ extr a_ name
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._action">
+            <summary>
+                The action
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._description">
+            <summary>
+                The description
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._id">
+            <summary>
+                The identifier
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._isPhoto">
+            <summary>
+                The is photo
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._path">
+            <summary>
+                The user's destination path.
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._quality">
+            <summary>
+                The quality
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._seconds">
+            <summary>
+                The seconds
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._tasked">
+            <summary>
+                The tasked
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._title">
+            <summary>
+                The title
+            </summary>
+        </member>
+        <member name="F:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity._type">
+            <summary>
+                The type
+            </summary>
+        </member>
+        <member name="E:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.MediaPicked">
+            <summary>
+                Occurs when [media picked].
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.OnSaveInstanceState(Android.OS.Bundle)">
+            <summary>
+                Called to retrieve per-instance state from an activity before being killed
+                so that the state can be restored in
+                <c>
+                    <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                </c>
+                or
+                <c>
+                    <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                </c>
+                (the
+                <c>
+                    <see cref="T:Android.OS.Bundle" />
+                </c>
+                populated by this method
+                will be passed to both).
+            </summary>
+            <param name="outState">Bundle in which to place your saved state.</param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnPause" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called to retrieve per-instance state from an activity before being killed
+                    so that the state can be restored in
+                    <c>
+                        <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                    </c>
+                    or
+                    <c>
+                        <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    (the
+                    <c>
+                        <see cref="T:Android.OS.Bundle" />
+                    </c>
+                    populated by this method
+                    will be passed to both).
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    This method is called before an activity may be killed so that when it
+                    comes back some time in the future it can restore its state.  For example,
+                    if activity B is launched in front of activity A, and at some point activity
+                    A is killed to reclaim resources, activity A will have a chance to save the
+                    current state of its user interface via this method so that when the user
+                    returns to activity A, the state of the user interface can be restored
+                    via
+                    <c>
+                        <see cref="M:Android.App.Activity.OnCreate(Android.OS.Bundle)" />
+                    </c>
+                    or
+                    <c>
+                        <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    .
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    Do not confuse this method with activity lifecycle callbacks such as
+                    <c>
+                        <see cref="M:Android.App.Activity.OnPause" />
+                    </c>
+                    , which is always called when an activity is being placed
+                    in the background or on its way to destruction, or
+                    <c>
+                        <see cref="M:Android.App.Activity.OnStop" />
+                    </c>
+                    which
+                    is called before destruction.  One example of when
+                    <c>
+                        <see cref="M:Android.App.Activity.OnPause" />
+                    </c>
+                    and
+                    <c>
+                        <see cref="M:Android.App.Activity.OnStop" />
+                    </c>
+                    is called and not this method is when a user navigates back
+                    from activity B to activity A: there is no need to call
+                    <c>
+                        <see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    on B because that particular instance will never be restored, so the
+                    system avoids calling it.  An example when
+                    <c>
+                        <see cref="M:Android.App.Activity.OnPause" />
+                    </c>
+                    is called and
+                    not
+                    <c>
+                        <see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    is when activity B is launched in front of activity A:
+                    the system may avoid calling
+                    <c>
+                        <see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    on activity A if it isn't
+                    killed during the lifetime of B since the state of the user interface of
+                    A will stay intact.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    The default implementation takes care of most of the UI per-instance
+                    state for you by calling
+                    <c>
+                        <see cref="M:Android.Views.View.OnSaveInstanceState" />
+                    </c>
+                    on each
+                    view in the hierarchy that has an id, and by saving the id of the currently
+                    focused view (all of which is restored by the default implementation of
+                    <c>
+                        <see cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+                    </c>
+                    ).  If you override this method to save additional
+                    information not captured by each individual view, you will likely want to
+                    call through to the default implementation, otherwise be prepared to save
+                    all of the state of each view yourself.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    If called, this method will occur before
+                    <c>
+                        <see cref="M:Android.App.Activity.OnStop" />
+                    </c>
+                    .  There are
+                    no guarantees about whether it will occur before or after
+                    <c>
+                        <see cref="M:Android.App.Activity.OnPause" />
+                    </c>
+                    .
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/app/Activity.html#onSaveInstanceState(android.os.Bundle)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.OnCreate(Android.OS.Bundle)">
+            <summary>
+                Called when the activity is starting.
+            </summary>
+            <param name="savedInstanceState">
+                If the activity is being re-initialized after
+                previously being shut down then this Bundle contains the data it most
+                recently supplied in
+                <c>
+                    <see cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+                </c>
+                .
+                <format type="text/html">
+                    <b>
+                        <i>Note: Otherwise it is null.</i>
+                    </b>
+                </format>
+            </param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.OnStart" />
+            <altmember cref="M:Android.App.Activity.OnSaveInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnRestoreInstanceState(Android.OS.Bundle)" />
+            <altmember cref="M:Android.App.Activity.OnPostCreate(Android.OS.Bundle)" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when the activity is starting.  This is where most initialization
+                    should go: calling
+                    <c>
+                        <see cref="M:Android.App.Activity.SetContentView(System.Int32)" />
+                    </c>
+                    to inflate the
+                    activity's UI, using
+                    <c>
+                        <see cref="M:Android.App.Activity.FindViewById(System.Int32)" />
+                    </c>
+                    to programmatically interact
+                    with widgets in the UI, calling
+                    <c>
+                        <see
+                            cref="M:Android.App.Activity.ManagedQuery(Android.Net.Uri, System.String[], System.String[], System.String[], System.String[])" />
+                    </c>
+                    to retrieve
+                    cursors for data being displayed, etc.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    You can call
+                    <c>
+                        <see cref="M:Android.App.Activity.Finish" />
+                    </c>
+                    from within this function, in
+                    which case onDestroy() will be immediately called without any of the rest
+                    of the activity lifecycle (
+                    <c>
+                        <see cref="M:Android.App.Activity.OnStart" />
+                    </c>
+                    ,
+                    <c>
+                        <see cref="M:Android.App.Activity.OnResume" />
+                    </c>
+                    ,
+                    <c>
+                        <see cref="M:Android.App.Activity.OnPause" />
+                    </c>
+                    , etc) executing.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <i>
+                        Derived classes must call through to the super class's
+                        implementation of this method.  If they do not, an exception will be
+                        thrown.
+                    </i>
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a href="http://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.OnActivityResult(System.Int32,Android.App.Result,Android.Content.Intent)">
+            <summary>
+                Called when an activity you launched exits, giving you the requestCode
+                you started it with, the resultCode it returned, and any additional
+                data from it.
+            </summary>
+            <param name="requestCode">
+                The integer request code originally supplied to
+                startActivityForResult(), allowing you to identify who this
+                result came from.
+            </param>
+            <param name="resultCode">
+                The integer result code returned by the child activity
+                through its setResult().
+            </param>
+            <param name="data">
+                An Intent, which can return result data to the caller
+                (various data can be attached to Intent "extras").
+            </param>
+            <since version="Added in API level 1" />
+            <altmember cref="M:Android.App.Activity.StartActivityForResult(Android.Content.Intent, System.Int32)" />
+            <altmember
+                cref="M:Android.App.Activity.CreatePendingResult(System.Int32, Android.Content.Intent, Android.Content.Intent)" />
+            <altmember cref="M:Android.App.Activity.SetResult(Android.App.Result)" />
+            <remarks>
+                <para tool="javadoc-to-mdoc">
+                    Called when an activity you launched exits, giving you the requestCode
+                    you started it with, the resultCode it returned, and any additional
+                    data from it.  The
+                    <format type="text/html">
+                        <var>resultCode</var>
+                    </format>
+                    will be
+                    <c>
+                        <see cref="F:Android.App.Result.Canceled" />
+                    </c>
+                    if the activity explicitly returned that,
+                    didn't return any result, or crashed during its operation.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    You will receive this call immediately before onResume() when your
+                    activity is re-starting.
+                </para>
+                <para tool="javadoc-to-mdoc">
+                    <format type="text/html">
+                        <a
+                            href="http://developer.android.com/reference/android/app/Activity.html#onActivityResult(int, int, android.content.Intent)"
+                            target="_blank">
+                            [Android Documentation]
+                        </a>
+                    </format>
+                </para>
+            </remarks>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetMediaFileAsync(Android.Content.Context,System.Int32,System.String,System.Boolean,Android.Net.Uri@,Android.Net.Uri,System.Int32,System.Int32)">
+            <summary>
+                Gets the media file asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="requestCode">The request code.</param>
+            <param name="action">The action.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <param name="path">The path.</param>
+            <param name="data">The data.</param>
+            <returns>Task&lt;MediaPickedEventArgs&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetStream(System.String,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+                Reads file from disk, resizes if requested, returns stream.
+            </summary>
+            <returns>The stream.</returns>
+            <param name="path">Path.</param>
+            <param name="isPhoto">If set to <c>true</c> is photo.</param>
+            <param name="maxPixelDimension">Max pixel dimension.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.TryMoveFileAsync(Android.Content.Context,Android.Net.Uri,Android.Net.Uri,System.Boolean)">
+            <summary>
+                Tries the move file asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="url">The URL.</param>
+            <param name="path">The path.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Task&lt;System.Boolean&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetVideoQuality(MediaPicker.Forms.Plugin.Abstractions.VideoQuality)">
+            <summary>
+                Gets the video quality.
+            </summary>
+            <param name="videoQuality">The video quality.</param>
+            <returns>System.Int32.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetOutputMediaFile(Android.Content.Context,System.String,System.String,System.Boolean)">
+            <summary>
+                Gets the output media file.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="subdir">The subdir.</param>
+            <param name="name">The name.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Uri.</returns>
+            <exception cref="T:System.IO.IOException">
+                Couldn't create directory, have you added the WRITE_EXTERNAL_STORAGE
+                permission?
+            </exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetFileForUriAsync(Android.Content.Context,Android.Net.Uri,System.Boolean)">
+            <summary>
+                Gets the file for URI asynchronous.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="uri">The URI.</param>
+            <param name="isPhoto">if set to <c>true</c> [is photo].</param>
+            <returns>Task&lt;Tuple&lt;System.String, System.Boolean&gt;&gt;.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.GetLocalPath(Android.Net.Uri)">
+            <summary>
+                Gets the local path.
+            </summary>
+            <param name="uri">The URI.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.Touch">
+            <summary>
+                Touches this instance.
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.RaiseOnMediaPicked(MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs)">
+            <summary>
+                Handles the <see cref="E:MediaPicked" /> event.
+            </summary>
+            <param name="e">The <see cref="T:MediaPicker.Forms.Plugin.Droid.MediaPickedEventArgs" /> instance containing the event data.</param>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerActivity.ResizeBasedOnPixelDimension(System.Nullable{System.Int32},System.Int32,System.Int32,System.Int32@,System.Int32@)">
+            <summary>
+                Calcualtes the target height and width of the image based on the max pixel dimension.
+            </summary>
+            <param name="maxPixelDimension">The maximum pixel dimension ratio (used to resize the image).</param>
+            <param name="currentWidth">Current Width of the image.</param>
+            <param name="currentHeight">Current Height of the image.</param>
+            <param name="targetWidth">Target Width of the image.</param>
+            <param name="targetHeight">Target Height of the image.</param>
+        </member>
+        <member name="T:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation">
+            <summary>
+                MediaPicker Implementation
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.#ctor">
+            <summary>
+                Initializes a new instance of the <see cref="N:MediaPicker" /> class.
+            </summary>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.IsCameraAvailable">
+            <summary>
+                Gets a value indicating whether this instance is camera available.
+            </summary>
+            <value><c>true</c> if this instance is camera available; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.IsPhotosSupported">
+            <summary>
+                Gets a value indicating whether this instance is photos supported.
+            </summary>
+            <value><c>true</c> if this instance is photos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.IsVideosSupported">
+            <summary>
+                Gets a value indicating whether this instance is videos supported.
+            </summary>
+            <value><c>true</c> if this instance is videos supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.SelectPhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+                Select a picture from library.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.TakePhotoAsync(MediaPicker.Forms.Plugin.Abstractions.CameraMediaStorageOptions)">
+            <summary>
+                Takes the picture.
+            </summary>
+            <param name="options">The storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.SelectVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+                Selects the video asynchronous.
+            </summary>
+            <param name="options">Video storage options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.TakeVideoAsync(MediaPicker.Forms.Plugin.Abstractions.VideoMediaStorageOptions)">
+            <summary>
+                Takes the video asynchronous.
+            </summary>
+            <param name="options">The options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.NotSupportedException">Throws an exception if feature is not supported.</exception>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.OnMediaSelected">
+            <summary>
+                Gets or sets the event that fires when media has been selected.
+            </summary>
+            <value>The on photo selected.</value>
+        </member>
+        <member name="P:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.OnError">
+            <summary>
+                Gets or sets the on error.
+            </summary>
+            <value>The on error.</value>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.Init">
+            <summary>
+                Used for registration with dependency service
+            </summary>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.CreateMediaIntent(System.Int32,System.String,System.String,MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions,System.Boolean)">
+            <summary>
+                Creates the media intent.
+            </summary>
+            <param name="id">The identifier.</param>
+            <param name="type">The type of intent.</param>
+            <param name="action">The action.</param>
+            <param name="options">The options.</param>
+            <param name="tasked">if set to <c>true</c> [tasked].</param>
+            <returns>Intent to create media.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.GetRequestId">
+            <summary>
+                Gets the request identifier.
+            </summary>
+            <returns>Request id as integer.</returns>
+        </member>
+        <member name="M:MediaPicker.Forms.Plugin.Droid.MediaPickerImplementation.TakeMediaAsync(System.String,System.String,MediaPicker.Forms.Plugin.Abstractions.MediaStorageOptions)">
+            <summary>
+                Takes the media asynchronous.
+            </summary>
+            <param name="type">The type of intent.</param>
+            <param name="action">The action.</param>
+            <param name="options">The options.</param>
+            <returns>Task with a return type of MediaFile.</returns>
+            <exception cref="T:System.InvalidOperationException">Only one operation can be active at a time.</exception>
+        </member>
+    </members>
+</doc>
