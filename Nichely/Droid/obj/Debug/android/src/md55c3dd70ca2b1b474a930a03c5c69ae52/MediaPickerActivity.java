@@ -12,7 +12,6 @@ public class MediaPickerActivity
 		__md_methods = 
 			"n_onSaveInstanceState:(Landroid/os/Bundle;)V:GetOnSaveInstanceState_Landroid_os_Bundle_Handler\n" +
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
-			"n_onActionModeFinished:(Landroid/view/ActionMode;)V:GetOnActionModeFinished_Landroid_view_ActionMode_Handler\n" +
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onScanCompleted:(Ljava/lang/String;Landroid/net/Uri;)V:GetOnScanCompleted_Ljava_lang_String_Landroid_net_Uri_Handler:Android.Media.MediaScannerConnection/IOnScanCompletedListenerInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
@@ -42,14 +41,6 @@ public class MediaPickerActivity
 	}
 
 	private native void n_onCreate (android.os.Bundle p0);
-
-
-	public void onActionModeFinished (android.view.ActionMode p0)
-	{
-		n_onActionModeFinished (p0);
-	}
-
-	private native void n_onActionModeFinished (android.view.ActionMode p0);
 
 
 	public void onActivityResult (int p0, int p1, android.content.Intent p2)

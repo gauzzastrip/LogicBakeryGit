@@ -135,7 +135,8 @@ namespace NichelyPrototype
 				var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
 					{
 						Directory = "Nichely",
-						Name = String.Format("photo_{0}.jpg", Guid.NewGuid())
+						Name = String.Format("photo_{0}.jpg", Guid.NewGuid()), 
+						SaveToAlbum = true
 					});
 
 				if (file == null)

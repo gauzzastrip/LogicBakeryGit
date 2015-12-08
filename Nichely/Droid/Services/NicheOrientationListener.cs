@@ -15,7 +15,7 @@ namespace NichelyPrototype.Droid
 			//parent = (MainActivity)context;
 
 			currentOrientation = -1;
-			SetCameraOrientation (0);
+			SetCameraOrientation (90);
 
 			this.onOrientationChanged = onOrientationChanged;
 		}
@@ -46,9 +46,26 @@ namespace NichelyPrototype.Droid
 						//	camera.SetParameters(
 						//camera.SetDisplayOrientation (rotation);
 						var currentParams = camera.GetParameters ();
-						currentParams.SetRotation (180);
+						//currentParams.SetRotation (rotation);
+						currentParams.Set ("orientation", "portrait");
+						currentParams.Set ("rotation", rotation);
+
 						camera.SetParameters (currentParams);
-						camera.SetDisplayOrientation (180);
+						//camera.SetDisplayOrientation (rotation);
+
+						//Java.Lang.Reflect.Method downPolymorphic;
+
+						try
+						{
+							var downPolymorphic = camera.GetType().GetMethod("SetDisplayOrientation", new Type[] { typeof( int) });
+							if (downPolymorphic != null)
+								downPolymorphic.Invoke(camera, new Object[] { rotation });
+						}
+						catch (Exception e1)
+						{
+						}
+
+
 						//p.SetRotation(rotation);
 
 						//mParameters.setRotation(rotation);

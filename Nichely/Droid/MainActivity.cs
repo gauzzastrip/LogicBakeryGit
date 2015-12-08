@@ -96,7 +96,7 @@ namespace NichelyPrototype.Droid
 //				}
 
 			//};
-
+			orientationListener.Enable();
 			LoadApplication (new App ());
 
 		}
@@ -120,7 +120,14 @@ namespace NichelyPrototype.Droid
 			NichelyPrototype.Droid.CameraService.OnResult (resultCode);
 
 		}
-
+		public override bool DispatchTouchEvent (Android.Views.MotionEvent ev)
+		{
+			return base.DispatchTouchEvent (ev);
+		}
+		public override void OnContentChanged ()
+		{
+			base.OnContentChanged ();
+		}
 		private void SetIoc ()
 		{
 //			var resolverContainer = new SimpleContainer();
