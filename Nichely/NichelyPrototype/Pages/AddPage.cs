@@ -51,7 +51,12 @@ namespace NichelyPrototype
 
             submitButton.Clicked += async (sender, e) => 
             {
+				if (!string.IsNullOrEmpty(categoryEntry.Text)){
 				SaveNiche( categoryEntry.Text);
+				}
+				else{
+					DisplayAlert("Enter a custom niche","You have to enter a value if you want to enter a custom niche","Ok");
+				}
             };
 
             var stack = new StackLayout

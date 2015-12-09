@@ -74,7 +74,7 @@ namespace NichelyPrototype
 			return filteredNiches.ToList();
 		}
 
-		public static async Task<List<Niche>> GetNichesByCategoryAsync(string searchText)
+		public static async Task<List<Niche>> GetNichesByCategoryAsync(string searchText = "")
 		{
 			var allNiches = await GetAllNichesAsync();
 			var filteredNiches = allNiches.Where (w => !(string.IsNullOrEmpty (w.Title)) && (w.Title.ToLower () == (searchText.ToLower ())));
@@ -82,7 +82,7 @@ namespace NichelyPrototype
 			return filteredNiches.ToList();
 		}
 
-		public static async Task<List<string>> GetCategoriesAsync(int take = 6)
+		public static async Task<List<string>> GetCategoriesAsync(int take = 8)
 		{
 			var allNiches = await GetAllNichesAsync ();
 

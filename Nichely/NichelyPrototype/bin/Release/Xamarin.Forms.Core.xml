@@ -1675,6 +1675,35 @@ class Bindable : BindableObject
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="T:Xamarin.Forms.BindablePropertyConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.BindablePropertyConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.BindablePropertyConverter.CanConvertFrom(System.Type)">
+            <param name="sourceType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.BindablePropertyConverter.ConvertFrom(System.Globalization.CultureInfo,System.Object)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.BindablePropertyConverter.Xamarin#Forms#IExtendedTypeConverter#ConvertFrom(System.Globalization.CultureInfo,System.Object,System.IServiceProvider)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <param name="serviceProvider">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="T:Xamarin.Forms.BindablePropertyKey">
             <summary>The secret key to a BindableProperty, used to implement a BindableProperty with restricted write access.</summary>
             <remarks>
@@ -4905,6 +4934,27 @@ namespace FormsGallery
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
+        <member name="T:Xamarin.Forms.FileImageSourceConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.FileImageSourceConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.FileImageSourceConverter.CanConvertFrom(System.Type)">
+            <param name="sourceType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.FileImageSourceConverter.ConvertFrom(System.Globalization.CultureInfo,System.Object)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="T:Xamarin.Forms.FocusEventArgs">
             <summary>Event args for <see cref="T:Xamarin.Forms.VisualElement" />'s <see cref="E:Xamarin.Forms.VisualElement.Focused" /> and <see cref="T:Xamarin.Forms.VisualElement.Unfocused" /> events.</summary>
             <remarks />
@@ -6282,6 +6332,27 @@ namespace FormsGallery
             <value>To be added.</value>
             <remarks>To be added.</remarks>
         </member>
+        <member name="T:Xamarin.Forms.ImageSourceConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.ImageSourceConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.ImageSourceConverter.CanConvertFrom(System.Type)">
+            <param name="sourceType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.ImageSourceConverter.ConvertFrom(System.Globalization.CultureInfo,System.Object)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
         <member name="T:Xamarin.Forms.INativeElementView">
             <summary>Interface that contains a read-only property that returns the platform-specific native view for a Xamarin.Forms element.</summary>
             <remarks>To be added.</remarks>
@@ -7350,6 +7421,27 @@ public class App : Application
         </member>
         <member name="F:Xamarin.Forms.LayoutOptions.StartAndExpand">
             <summary>A <see cref="T:Xamarin.Forms.LayoutOptions" /> structure that describes an element that appears at the start of its parent and expands.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Xamarin.Forms.LayoutOptionsConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.LayoutOptionsConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.LayoutOptionsConverter.CanConvertFrom(System.Type)">
+            <param name="sourceType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.LayoutOptionsConverter.ConvertFrom(System.Globalization.CultureInfo,System.Object)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>
         <member name="T:Xamarin.Forms.LineBreakMode">
@@ -13198,6 +13290,35 @@ var beeroclock = new TimePicker () { Time = new TimeSpan (17,0,0) };
         </member>
         <member name="M:Xamarin.Forms.TypeConverterAttribute.GetHashCode">
             <summary>Returns a value that is used for efficient storage and lookup of this <see cref="T:Xamarin.Forms.TypeConverterAttribute" /> object.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="T:Xamarin.Forms.TypeTypeConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.TypeTypeConverter">
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.TypeTypeConverter.CanConvertFrom(System.Type)">
+            <param name="sourceType">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.TypeTypeConverter.ConvertFrom(System.Globalization.CultureInfo,System.Object)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.TypeTypeConverter.Xamarin#Forms#IExtendedTypeConverter#ConvertFrom(System.Globalization.CultureInfo,System.Object,System.IServiceProvider)">
+            <param name="culture">To be added.</param>
+            <param name="value">To be added.</param>
+            <param name="serviceProvider">To be added.</param>
+            <summary>To be added.</summary>
             <returns>To be added.</returns>
             <remarks>To be added.</remarks>
         </member>

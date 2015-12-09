@@ -88,8 +88,6 @@ class MonoPackageManager_Resources {
 		"FFImageLoading.Forms.dll",
 		"FFImageLoading.Forms.Droid.dll",
 		"FormsViewGroup.dll",
-		"MediaPicker.Forms.Plugin.Abstractions.dll",
-		"MediaPicker.Forms.Plugin.Android.dll",
 		"Newtonsoft.Json.dll",
 		"NichelyPrototype.dll",
 		"Plugin.CurrentActivity.dll",

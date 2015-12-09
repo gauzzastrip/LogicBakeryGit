@@ -34,15 +34,15 @@ namespace NichelyPrototype.Droid
 //				var field = typeof(Resource.Drawable).GetField (resourceId);
 //				var value = (int)field.GetRawConstantValue ();
 
-				//await BitmapFactory.DecodeFileAsync (largeImage.ImageSource, options);
+				await BitmapFactory.DecodeFileAsync (largeImage.ImageSource, options);
 
 				//The with and height of the elements (LargeImage) will be used to decode the image
 				var width = (int)Element.Width;
-				var height = (int)Element.Height;
+				var height =(int)Element.Height;
+
+				options.InSampleSize = CalculateInSampleSize (options, width, height);
 				options.OutWidth = width;
 				options.OutHeight = height;
-				options.InSampleSize = 3;// CalculateInSampleSize (options, width, height);
-
 				options.InJustDecodeBounds = false;
 				using (var bitmap = await BitmapFactory.DecodeFileAsync (largeImage.ImageSource, options)) {
 					// (Context.Resources, value, options);

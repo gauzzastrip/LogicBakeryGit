@@ -7,8 +7,6 @@ G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\FFImageLoading.Dro
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\FFImageLoading.Forms.dll
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\FFImageLoading.Forms.Droid.dll
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\FormsViewGroup.dll
-G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\MediaPicker.Forms.Plugin.Abstractions.dll
-G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\MediaPicker.Forms.Plugin.Android.dll
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\Mono.Android.dll
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\Mono.Android.Export.dll
 G:\Projects\LogicBakeryGit\Nichely\Droid\obj\Debug\assemblies\mscorlib.dll

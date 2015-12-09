@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Droid\NichelyPrototype.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
+﻿<Properties StartupItem="Droid\Nichi.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.169.254.109.177:5555" />
   <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs">
     <Files>

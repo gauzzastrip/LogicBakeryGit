@@ -1,25 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.logicbakery.nichelyprototype" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.logicbakery.nichi" android:installLocation="auto">
   <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="21" />
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.INTERNET" />
-  <application android:label="Nicher" android:name="md52689f2df1f9d26957fa091e8dd83237d.MainApplication" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="NichelyPrototype.Droid" android:name="md52689f2df1f9d26957fa091e8dd83237d.MainActivity">
+  <application android:label="Nichi" android:name="md52689f2df1f9d26957fa091e8dd83237d.MainApplication" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="Nichi.Droid" android:name="md52689f2df1f9d26957fa091e8dd83237d.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:name="md55f0adb530df98f52fb50bd7419fce1ce.MediaPickerActivity" />
     <activity android:name="md55c3dd70ca2b1b474a930a03c5c69ae52.MediaPickerActivity" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.logicbakery.nichelyprototype.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.logicbakery.nichi.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
         <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.com.logicbakery.nichelyprototype" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.logicbakery.nichi" />
       </intent-filter>
     </receiver>
   </application>
