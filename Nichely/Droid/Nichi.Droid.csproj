@@ -127,17 +127,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj">
-      <Project>{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}</Project>
-      <Name>Media.Plugin.Abstractions</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\Media.Plugin.Android.csproj">
-      <Project>{56A56F17-7DE1-4CA1-9617-BF32E971AC84}</Project>
-      <Name>Media.Plugin.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\NichelyPrototype\Nichi.csproj">
       <Project>{9E36E1B3-17B3-40B9-9730-5B95973A2DD4}</Project>
       <Name>Nichi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj">
+      <Project>{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}</Project>
+      <Name>Media.Plugin.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Xamarin.Plugins\Media\Media\Media.Plugin.Android\Media.Plugin.Android.csproj">
+      <Project>{56A56F17-7DE1-4CA1-9617-BF32E971AC84}</Project>
+      <Name>Media.Plugin.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

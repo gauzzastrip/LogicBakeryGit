@@ -1,0 +1,5 @@
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Release\Plugin.Media.Abstractions.xml
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Release\Plugin.Media.Abstractions.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Release\Plugin.Media.Abstractions.pdb
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Release\Plugin.Media.Abstractions.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Release\Plugin.Media.Abstractions.pdb

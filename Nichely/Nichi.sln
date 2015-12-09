@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NichelyPrototype.iOS", "iOS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nichi.Droid", "Droid\Nichi.Droid.csproj", "{A84E7BD5-AD6A-46E7-AD7E-3455E4BDEDDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin", "..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\Media.Plugin.csproj", "{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin", "Xamarin.Plugins\Media\Media\Media.Plugin\Media.Plugin.csproj", "{A6FCEF44-D2BA-42C7-B3CB-13667BCD7B54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.Abstractions", "..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj", "{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.Abstractions", "Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\Media.Plugin.Abstractions.csproj", "{6EDB0588-FFC5-4EF5-8A99-9E241D0F878D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.Android", "..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\Media.Plugin.Android.csproj", "{56A56F17-7DE1-4CA1-9617-BF32E971AC84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.Android", "Xamarin.Plugins\Media\Media\Media.Plugin.Android\Media.Plugin.Android.csproj", "{56A56F17-7DE1-4CA1-9617-BF32E971AC84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.iOS", "..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.iOS\Media.Plugin.iOS.csproj", "{D7F3AA16-8EF1-4924-9E0A-DAD4AB46B2EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Media.Plugin.iOS", "Xamarin.Plugins\Media\Media\Media.Plugin.iOS\Media.Plugin.iOS.csproj", "{D7F3AA16-8EF1-4924-9E0A-DAD4AB46B2EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

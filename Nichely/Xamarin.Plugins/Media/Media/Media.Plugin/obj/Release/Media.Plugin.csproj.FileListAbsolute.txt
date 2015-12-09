@@ -1,0 +1,9 @@
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.xml
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.pdb
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.Abstractions.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.Abstractions.pdb
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\bin\Release\Plugin.Media.Abstractions.xml
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\obj\Release\Media.Plugin.csprojResolveAssemblyReference.cache
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\obj\Release\Plugin.Media.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin\obj\Release\Plugin.Media.pdb
