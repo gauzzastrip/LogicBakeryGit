@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="Droid\Nichi.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.AVD_GalaxyNexus_ToolsForApacheCordova" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="g:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs">
+    <Files>
+      <File FileName="NichelyPrototype\Pages\AddPage.cs" Line="1" Column="1" />
+      <File FileName="NichelyPrototype\Pages\DetailPage.cs" Line="1" Column="1" />
+      <File FileName="NichelyPrototype\Pages\HomePage.cs" Line="1" Column="1" />
+      <File FileName="Droid\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="..\..\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaPickerActivity.cs" Line="1" Column="1" />
+      <File FileName="g:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Android\MediaImplementation.cs" Line="402" Column="1" />
+      <File FileName="Droid\Services\NichiOrientationListener.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

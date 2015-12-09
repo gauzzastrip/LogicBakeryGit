@@ -1,0 +1,9 @@
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Debug\Plugin.Media.Abstractions.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Debug\Plugin.Media.Abstractions.pdb
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Debug\Plugin.Media.Abstractions.dll
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Debug\Plugin.Media.Abstractions.pdb
+G:\Projects\Xamarin.Plugins\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Debug\Media.Plugin.Abstractions.csprojResolveAssemblyReference.cache
+G:\Projects\LogicBakeryGit\Nichely\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Debug\Plugin.Media.Abstractions.dll
+G:\Projects\LogicBakeryGit\Nichely\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\bin\Debug\Plugin.Media.Abstractions.pdb
+G:\Projects\LogicBakeryGit\Nichely\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Debug\Plugin.Media.Abstractions.dll
+G:\Projects\LogicBakeryGit\Nichely\Xamarin.Plugins\Media\Media\Media.Plugin.Abstractions\obj\Debug\Plugin.Media.Abstractions.pdb
