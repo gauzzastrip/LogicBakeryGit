@@ -132,3 +132,5 @@ G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\obj\Debug\MusicRotatoe.cspr
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\obj\Debug\MusicRotatoe.csprojResolveAssemblyReference.cache
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\obj\Debug\MusicRotatoe.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\obj\Debug\MusicRotatoe.pdb
+G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\bin\Debug\YoutubeExtractor.dll
+G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoe\bin\Debug\YoutubeExtractor.xml

@@ -43,5 +43,11 @@ namespace MusicRotatoe.DataAccess
                 await BlobCache.UserAccount.Invalidate(rotatoe.RotatoeId.ToString());
             }
         }
+
+        public async Task DeleteAllRotatoes()
+        {
+            BlobCache.ApplicationName = Settings.ApplicationName;
+            await BlobCache.UserAccount.InvalidateAll();
+        }
     }
 }

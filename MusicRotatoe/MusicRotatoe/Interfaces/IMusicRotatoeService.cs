@@ -14,5 +14,6 @@ namespace MusicRotatoe.Interfaces
         Task<List<Rotatoe>> GetAllRotatoes();
         Task<List<string>> GetAllGenres();
         Task<Rotatoe> RefreshMusic(Rotatoe rotatoe);
+        Task DeleteAllRotatoes();
     }
 }

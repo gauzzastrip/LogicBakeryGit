@@ -12,5 +12,8 @@ namespace MusicRotatoe.Models
         public string Title { get; set; }
         public string YoutubeId { get; set; }
         public bool Keep { get; set; }
+        public string SpotifyArtistId { get; set; }
+        public string SpotifyTrackId { get; set; }
+        public string Artist { get; set; }
     }
 }

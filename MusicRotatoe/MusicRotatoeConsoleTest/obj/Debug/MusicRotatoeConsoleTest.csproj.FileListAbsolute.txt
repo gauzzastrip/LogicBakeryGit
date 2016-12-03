@@ -85,7 +85,6 @@ G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\System
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\System.Reactive.Windows.Threading.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\SpotifyAPI.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Google.Apis.YouTube.v3.dll
-G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\libvideo.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Google.Apis.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Google.Apis.Core.dll
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Microsoft.Threading.Tasks.dll
@@ -116,3 +115,5 @@ G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Zlib.P
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\System.Net.Http.Primitives.xml
 G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\obj\Debug\MusicRotatoeConsoleTest.csprojResolveAssemblyReference.cache
+G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\YoutubeExtractor.dll
+G:\Projects\LogicBakeryGit\MusicRotatoe\MusicRotatoeConsoleTest\bin\Debug\YoutubeExtractor.xml

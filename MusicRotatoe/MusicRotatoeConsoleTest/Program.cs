@@ -20,15 +20,16 @@ namespace MusicRotatoeConsoleTest
         {
             Console.WriteLine("Starting");
             var service = new MusicRotatoeService();
+           
             var allGenres = await service.GetAllGenres();
             var allRotatoes = await service.GetAllRotatoes();
-            Rotatoe rotatoe = null;// allRotatoes.FirstOrDefault();
+            Rotatoe rotatoe = allRotatoes.FirstOrDefault();
             if (rotatoe == null)
             {
                 rotatoe = new Rotatoe()
                 {
                     Title = "Super upbeat",
-                    Genres = new List<string>() { "rock", "pop-punk" },
+                    Genres = new List<string>() { "rock","punk"},
                     Interval = 1000,
                     StartDate = DateTime.Now,
                     TotalSongs = 3,
@@ -51,15 +52,15 @@ namespace MusicRotatoeConsoleTest
             var rotatoeSadObscure = new Rotatoe()
             {
                 Title = "Sad Obscure",
-                Genres = new List<string>() { "rock", "pop-punk" },
+                Genres = new List<string>() { "emo"},
                 Interval = 1000,
                 StartDate = DateTime.Now,
                 TotalSongs = 3,
-                MaxEnergy = 10,
-                MaxPopularity = 10
+                MaxEnergy = 50,
+                MinPopularity= 75
             };
             Console.WriteLine("Refreshing Music");
-            results = await service.RefreshMusic(rotatoe);
+            var resultssad = await service.RefreshMusic(rotatoeSadObscure);
         }
     }
 }

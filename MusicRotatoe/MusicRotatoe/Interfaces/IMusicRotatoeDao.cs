@@ -12,6 +12,6 @@ namespace MusicRotatoe.Interfaces
         Task<List<Rotatoe>> GetAllRotatoes();
         Task SaveRotatoe(Rotatoe rotatoe);
         Task DeleteRotatoe(Rotatoe rotatoe);
-
+        Task DeleteAllRotatoes();
     }
 }
