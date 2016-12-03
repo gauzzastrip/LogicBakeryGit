@@ -20,7 +20,7 @@ namespace MusicRotatoeConsoleTest
         {
             Console.WriteLine("Starting");
             var service = new MusicRotatoeService();
-           
+            //await service.DeleteAllRotatoes();
             var allGenres = await service.GetAllGenres();
             var allRotatoes = await service.GetAllRotatoes();
             Rotatoe rotatoe = allRotatoes.FirstOrDefault();
@@ -32,7 +32,7 @@ namespace MusicRotatoeConsoleTest
                     Genres = new List<string>() { "rock","punk"},
                     Interval = 1000,
                     StartDate = DateTime.Now,
-                    TotalSongs = 3,
+                    SongsToDownload = 3,
                     MinEnergy = 90
                 };
             }
@@ -42,7 +42,11 @@ namespace MusicRotatoeConsoleTest
             if (results.Songs.Count() > 0)
             {
                 results.Songs.OrderBy(o => Guid.NewGuid()).FirstOrDefault().Keep = true;
+
+                Console.WriteLine("Keeping 1 Song");
                 await service.SaveRotatoe(results);
+                Console.WriteLine("Refreshing 1 Song");
+                results = await service.RefreshSong(rotatoe, results.Songs.OrderBy(o => o.Keep).LastOrDefault().SongId);
                 Console.WriteLine("DONE");
             }
             else
@@ -55,7 +59,7 @@ namespace MusicRotatoeConsoleTest
                 Genres = new List<string>() { "emo"},
                 Interval = 1000,
                 StartDate = DateTime.Now,
-                TotalSongs = 3,
+                SongsToDownload = 3,
                 MaxEnergy = 50,
                 MinPopularity= 75
             };

@@ -18,7 +18,7 @@ namespace MusicRotatoe.Models
             MaxEnergy = 100;
 
         }
-        public Guid RotatoeId { get; set; }
+        public Guid RotatoeId { get; }
         public string Title { get; set; }
         public string NextRefreshMessage
         {
@@ -27,7 +27,7 @@ namespace MusicRotatoe.Models
                 return string.Format("Runs Every {0} days. Next Run: {1}", (Interval / 60) / 24, NextReload.ToString("MM/dd/yyyy hh:mm tt"));
             }
         }
-        public int TotalSongs { get; set; }
+        public int SongsToDownload { get; set; }
         public int Interval { get; set; }    //minutes
         public DateTime StartDate { get; set; }
         public DateTime NextReload

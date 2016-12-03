@@ -57,9 +57,80 @@ namespace MusicRotatoe.Services
         }
         public async Task DeleteAllRotatoes()
         {
+            //TODO remove all actual music files too but I'm leaving it out for testing now
             await musicRotatoeDao.DeleteAllRotatoes();
         }
+        public async Task<Rotatoe> RefreshSong(Rotatoe rotatoe, Guid songId)
+        {
+            var matchingSongs = rotatoe.Songs.Where(w => w.SongId == songId);
+            if (matchingSongs.Count() > 0)
+            {
+                var removeSong = matchingSongs.First();
+                rotatoe.Songs.Remove(removeSong);
+                await RemoveSong(removeSong.File);
+                var recommendations = await GetReccommendationsAsync(rotatoe, 1);
+                rotatoe = await GetSongs(rotatoe, 1, recommendations, false);
+            }
+            return rotatoe;
+        }
+
         public async Task<Rotatoe> RefreshMusic(Rotatoe rotatoe)
+        {
+            int songsToDownload = rotatoe.SongsToDownload * 2;
+            var recommendations = await GetReccommendationsAsync(rotatoe, songsToDownload);
+            rotatoe = await GetSongs(rotatoe, rotatoe.SongsToDownload, recommendations, true);
+            return rotatoe;
+        }
+
+        private async Task<Rotatoe> GetSongs(Rotatoe rotatoe, int songsToDownload, Recommendations recommendations, bool refreshRotatoeSongs)
+        {
+            if (recommendations.Tracks.Count() > 0)
+            {
+                var songsToLoad = recommendations.Tracks.OrderBy(x => Guid.NewGuid()).Take(songsToDownload);
+                var previousSongs = rotatoe.Songs;
+                if (refreshRotatoeSongs)
+                    rotatoe.Songs = rotatoe.Songs.Where(w => w.Keep).ToList(); //keep the keepers
+
+                foreach (var song in songsToLoad)
+                {
+                    var artist = song.Artists.FirstOrDefault();
+                    var songTitle = string.Format("{0} - {1}", artist.Name, song.Name);
+                    if (!rotatoe.Songs.Any(w => w.SpotifyTrackId == song.Id))
+                    {
+                        var youtubeId = await GetYoutubeId(songTitle);
+
+                        if (!(string.IsNullOrEmpty(youtubeId)))
+                        {
+                            var file = await GetSong(youtubeId);
+
+                            rotatoe.Songs.Add(new Song()
+                            {
+                                File = file,
+                                Title = songTitle,
+                                YoutubeId = youtubeId,
+                                Artist = artist.Name,
+                                SpotifyArtistId = artist.Id,
+                                SpotifyTrackId = song.Id
+                            });
+                        }
+                    }
+                }
+
+
+                await SaveRotatoe(rotatoe);
+                var allRotatoes = await GetAllRotatoes();
+                //clean up any songs that were removed
+                var removers = previousSongs.Where(w => !allRotatoes.Any(r => r.Songs.Contains(w)));
+                foreach (var song in removers)
+                {
+                    await RemoveSong(song.File);
+                }
+
+            }
+            return rotatoe;
+
+        }
+        private async Task<Recommendations> GetReccommendationsAsync(Rotatoe rotatoe, int songsToDownload)
         {
             var recommendations = new Recommendations();
             if (spotifyApi == null)
@@ -81,7 +152,7 @@ namespace MusicRotatoe.Services
                     null,
                     minTuneable,
                     maxTuneable,
-                    rotatoe.TotalSongs * 2,
+                    songsToDownload,
                     null);
             }
             catch (Exception ex)
@@ -89,49 +160,7 @@ namespace MusicRotatoe.Services
                 System.Diagnostics.Debug.WriteLine(ex.ToString());
             }
 
-            if (recommendations.Tracks.Count() > 0)
-            {
-                var keepers = recommendations.Tracks.OrderBy(x => Guid.NewGuid()).Take(rotatoe.TotalSongs);
-                var previousSongs = rotatoe.Songs;
-                rotatoe.Songs = rotatoe.Songs.Where(w => w.Keep).ToList(); //keep the keepers
-               
-                foreach (var song in keepers)
-                {
-                    var artist = song.Artists.FirstOrDefault();
-                    var songTitle = string.Format("{0} - {1}", artist.Name, song.Name);
-                    if (!rotatoe.Songs.Any(w => w.Title == songTitle))
-                    {
-                        var youtubeId = await GetYoutubeId(songTitle);
-
-                        if (!(string.IsNullOrEmpty(youtubeId)))
-                        {
-                            var file = await GetSong(youtubeId);
-
-                            rotatoe.Songs.Add(new Song()
-                            {
-                                File = file,
-                                Title = songTitle,
-                                YoutubeId = youtubeId,
-                                Artist = artist.Name,
-                                SpotifyArtistId = artist.Id,
-                                SpotifyTrackId = song.Id
-                            });
-                        }
-                    }
-                }
-               
-              
-                await SaveRotatoe(rotatoe);
-                var allRotatoes = await GetAllRotatoes();
-                var removers = previousSongs.Where(w => !allRotatoes.Any(r => r.Songs.Contains(w)));
-                foreach (var song in removers)
-                {
-                    await RemoveSong(song.File);
-                }
-
-            }
-
-            return rotatoe;
+            return recommendations;
         }
         private async Task RemoveSong(string fileName)
         {
@@ -183,7 +212,7 @@ namespace MusicRotatoe.Services
                     var videos = videoInfos
                         .Where(info => info.VideoType == VideoType.Mp4)
                         .OrderBy(o => o.Resolution).ThenByDescending(info => info.AudioBitrate);
-                        
+
                     if (videos.Count() > 0)
                     {
                         var video = videos.First();
@@ -200,34 +229,34 @@ namespace MusicRotatoe.Services
                          * The first argument is the video where the audio should be extracted from.
                          * The second argument is the path to save the audio file.
                          */
-                       
+
                         IFile savePath = await documents.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
                         var audioDownloader = new VideoDownloader(video, savePath.Path);
-                         
+
                         await audioDownloader.Execute();
                     }
 
-                        //var youTube = YouTube.Default; // starting point for YouTube actions
+                    //var youTube = YouTube.Default; // starting point for YouTube actions
 
-                        //var allVideos = await youTube.GetAllVideosAsync(youtubeLink); // gets a Video object with info about the video\
-                        //var video = allVideos.Where(w => w.Format == VideoFormat.Mp4).FirstOrDefault();
-                        //if (video != null && !(string.IsNullOrEmpty(video.Title)))
-                        //{
+                    //var allVideos = await youTube.GetAllVideosAsync(youtubeLink); // gets a Video object with info about the video\
+                    //var video = allVideos.Where(w => w.Format == VideoFormat.Mp4).FirstOrDefault();
+                    //if (video != null && !(string.IsNullOrEmpty(video.Title)))
+                    //{
 
-                        //    var videoBytes = await video.GetBytesAsync();
+                    //    var videoBytes = await video.GetBytesAsync();
 
-                        //    // create a file, overwriting any existing file
+                    //    // create a file, overwriting any existing file
 
-                        //    var file = await documents.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
+                    //    var file = await documents.CreateFileAsync(fileName, CreationCollisionOption.ReplaceExisting);
 
-                        //    using (var stream = await file.OpenAsync(FileAccess.ReadAndWrite))
-                        //    {
-                        //        var videoBuffer = await video.GetBytesAsync();
-                        //        await stream.WriteAsync(videoBuffer, 0, videoBuffer.Length);
-                        //    }
+                    //    using (var stream = await file.OpenAsync(FileAccess.ReadAndWrite))
+                    //    {
+                    //        var videoBuffer = await video.GetBytesAsync();
+                    //        await stream.WriteAsync(videoBuffer, 0, videoBuffer.Length);
+                    //    }
 
-                        //}
-                    }
+                    //}
+                }
                 return fileName;
             }
             catch (Exception ex)

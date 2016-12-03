@@ -8,6 +8,11 @@ namespace MusicRotatoe.Models
 {
     public class Song
     {
+        public Song()
+        {
+            SongId = Guid.NewGuid();
+        }
+        public Guid SongId { get; }
         public string File { get; set; }
         public string Title { get; set; }
         public string YoutubeId { get; set; }
